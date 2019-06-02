@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            String .toString() 转字符串
+            undefined null 不能转通过toString()字符串
+            对象 [object Object]
+            因为数组最后一个逗号可以省略
+            [1,] 转字符串 为 '1'
+
+            !! 和 Boolean() 都是转布尔
+            只有 0 undefined null '' NaN转成boolean为false
+
+
+            Number() 转数字类型
+            字符串中含有非数字转成数字类型为NaN
+            特例 '' ' '  转数字为0
+            布尔值转数字 false 0 true 1
+            null 0
+            undefined 转布尔为 NaN
+            把引用值转布尔
+                1.先转字符串
+                2.再转布尔
+            Number()
+
+            isNaN(NaN) 验证是不是NaN
+                1.先转数字
+                2.再验证
+
+
+
+            parseInt() 能把整数部分提取出来,只要遇到不是整数就会停止
+                1.先转数字
+                2.转整数
+            parseFloat() 能把小数部分提取出来,只要遇到不是小数就会停止
+                1.先转数字
+                2.转小数
+            */
+            let a = function () {
+                console.log(1)
+            }
+            console.log(parseInt(a));
+
+        </script>
+    </body>
+</html>
+a
+
+
+
+
+
+
+
+
+
+
+
+
+
