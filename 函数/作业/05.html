@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            * 1-100内的质数
+            * */
+            for (var i = 1; i <= 100; i++) {
+                var num = 0;
+                for (var j = 1; j <=i; j++) {
+                    if(i%j==0){
+                        num++
+                    }
+
+                }
+                if(num==2){
+                    console.log(i);
+                }
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

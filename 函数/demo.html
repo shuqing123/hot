@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            定义函数的方式
+            1.函数表达式
+                let x = function (){}
+            2.函数声明
+                function x(形参){}
+
+            函数执行
+            x(实参)
+            实参和形参按照顺序一一对应
+            实参数量大于形参数量
+                多出的实参由函数内置的arguments(所有实参)以数组的形式接收
+            实参数量少于形参数量
+                没有实参的形参的值是undefined
+
+            函数返回值
+            默认返回undefined
+            也可以通过关键字return终止函数并且返回自定义的返回值
+            */
+            function f(a) {
+                console.log(arguments);
+                a = 20;
+                /*
+                实参和形参建立映射关系的时候
+                它的修改会映射到arguments
+                */
+            }
+            f(5)
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

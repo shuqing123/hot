@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            * 1 1 2 3 5 8 13...
+            * 第n项是什么
+            * */
+            function fn(n) {
+                if(n==1||n==2){
+                    return 1
+                }
+                return fn(n-1)+fn(n-2)
+            }
+            console.log(fn(5))
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
