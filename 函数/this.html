@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            * this指向调用他的对象
+            * 函数自执执行this指向window
+            * 对象点操作执行函数，（通过数组下标找到的函数执行，this指向数组本生）
+            * call,apply修改this的指向
+            *
+            * */
+            function f(a,b) {
+                console.log(a,b);
+                console.log(this)
+            }
+            f()
+            f.call(null,[5,6],7)
+            f.apply(undefined,[5,6])
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

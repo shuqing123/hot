@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <span></span><span></span><span></span>
+        </div>
+
+        <script>
+            var domNode = document.getElementById('wrap')
+            function myChildren(p) {
+                var n = p.childNodes;
+                var a = [];
+                for(var i=0;i<n.length;i++){
+                    if(n[i].nodeType===1){
+                        a.push(n[i])
+                    }
+                }
+                return a
+            }
+            myChildren(domNode)
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

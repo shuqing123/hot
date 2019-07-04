@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            var arr = [1,2,5,8]
+            /*
+            * 数组的索引是字符串
+            * 数组里可以放任何类型的数组
+            * 如果索引不是数字，不计算length
+            * unshift 往数组前面添加数据，并返回改变后的数组的length
+            * 可以添加多条数据，用逗号隔开
+            *
+            *
+            * pop()往数组后面减少一个数据，返回删除的数据
+            * shift()往数组前面减少一个数据，返回删除的数据
+            *
+            *
+            * Array.isArray(arr)判断是不是数组
+            * */
+            //arr[{}]=10;
+            arr.push(10)
+            //往数组后面加数据，并返回改变后的数组的length
+            console.log(arr);
+            arr.splice(1,2)
+            /*
+            * 冲索引1开始，删除2条数据，返回删掉的值(数组)  改变原来的数组
+            * 参数
+            *   1.开始索引  只有一个参数，没有其他参数时，会删除索引以后的数据
+            *   2.删掉几条数据
+            *   3.在索引前添加什么数据
+            *   第3个参数后都是添加的数据
+            * */
+
+            arr.reverse()//数组反序，改变原来的数组
+            arr.indexOf(10)//从前面开始，返回数组第一次出现下标，没有就返回-1
+            arr.lastIndexOf(10)//从后面开始，返回数组第一次出现下标，没有就返回-1
+            /*
+            * 数组的indexOf和lastIndexOf和字符串用法一致
+            *
+            * */
+            arr.slice()//和字符串的slice用法一致,不会改变原数组
+            arr.concat([0])//和字符串用法一致  合并多个数组时，会扁平化数组，不改变原数组
+            arr.join()
+            /*
+            *
+            *
+            * 把数组以什么字符(不是字符串会隐式转字符串)拼接成字符串
+            * 和str.split()字符串的方法相对应,把字符串分成数组
+            * */
+            arr.sort()
+            /*
+            * 按ASCII码排序
+            *如果一个函数当作实参传递进另一个函数，穿进去的这个函数就叫回调函数
+            *
+            * 函数的返回值是正就调换位子，负就不颠倒位置
+            * */
+            arr.sort(function (a,b) {
+                return a-b
+            })//小到大排序
+            arr.sort(function (a,b) {
+                return b-a
+            })//从大到小排序
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

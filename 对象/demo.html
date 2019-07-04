@@ -18,7 +18,36 @@
         <div id="wrap"></div>
 
         <script>
-
+            /*
+            * 对象的增删改查
+            *   查：obj.name
+            *       obj['name']
+            *   增：obj.sex='男'
+            *   改：obj.sex='女'
+            *   删：delete obj.sex 返回true delete是运算符
+            *
+            *   对象的特点：
+            *     对象的属性名（键）不能重复,会隐式转换成字符串
+            *     按照uncode排序
+            *
+            *
+            * */
+            var obj = {
+                name:'liang',
+                age:18
+            }
+            console.log(obj.name);
+            console.log(obj['age']);
+            obj.sex = '男';
+            console.log(obj);
+            obj.sex='女';
+            console.log(obj);
+            delete obj.sex
+            console.log(obj);
+            for(var key in obj){
+                //取值的时候要注意，key是变量
+                console.log(obj[key]);
+            }
         </script>
     </body>
 </html>

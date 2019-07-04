@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            * 元素节点.style  获取的是行内样式
+            * 能读，能写
+            *
+            * */
+            var oW = document.getElementById('wrap');
+            oW.style.backgroundColor = 'red';
+            oW.style.width = '100px';
+            oW.style.height = '100px';
+            window.getComputedStyle(oW,null)//获取计算样式表css，只读
+            /*
+            * window.getComputedStyle(oW,null)  ie8以上
+            * 参数
+            *   1.元素节点
+            *   2.伪元素属性
+            * */
+            new Promise((res,rej)=>{
+                setTimeout(function () {
+                    console.log(1)
+                    res()
+                },1000)
+            }).then(data=>{
+                console.log(2)
+            })
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

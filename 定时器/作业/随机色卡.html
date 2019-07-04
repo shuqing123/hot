@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap span{
+                display: inline-block;
+                width: 200px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <button>run</button><button>stop</button>
+        <div id="wrap"></div>
+
+        <script>
+            //x.toString(16) 可以把x转成16进制的字符串显示
+            /*
+            * Math.random().toString(16).substr(2,6)
+            *
+            * */
+            (function(){
+                var oBtn = document.getElementsByTagName('button')
+                var oW = document.getElementById('wrap')
+                //随机色
+                function ranColor() {
+                    return {
+                        r:Math.floor(Math.random()*256),
+                        g:Math.floor(Math.random()*256),
+                        b:Math.floor(Math.random()*256)
+                    }
+                }
+                //添加元素
+                function auto(){
+                    var o = ranColor()
+                    //var rgb = '#'+Math.random().toString(16).substr(2,6);
+                    oW.innerHTML+=`<span
+                    style="background-color: rgb(${o.r},${o.g},${o.b})">
+                        rgb(${o.r},${o.g},${o.b})
+                    </span>`;
+                }
+                //run
+                var timer=0;
+                oBtn[0].onclick = function () {
+                    auto()
+                    clearInterval(timer);//重点：多次点击要清除定时器
+                    timer = setInterval(auto,1000)
+                }
+                //stop
+                oBtn[1].onclick = function () {
+                    clearInterval(timer)
+                }
+            })();
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

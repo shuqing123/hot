@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            * str.length 字符串的长度
+            * str[0] 拿到字符串第一字符  和str.charAt(0)一样
+            * ASCII
+            *   48-57 0-9
+            *   65-90 A-Z
+            *   97-122 a-z
+            *
+            *
+            * */
+            var str = 'Liang';
+            console.log(str[0]);
+            str.charCodeAt(5)//获取索引字符的unicode码
+            String.fromCharCode(97)//通过ASCII码得到对应的字符
+            str.toUpperCase()//字符串变大写
+            str.toLowerCase()//字符串变小写
+            console.log(str.indexOf('ag'));//第一次出现字符的索引值，没有返回-1
+            str.lastIndexOf('a')//最后一次出现的字符的索引值，没有返回-1
+            str.substr(1,2)//字符串截取  参数：1.索引 2.截取几个字符
+            console.log(str.substring(3, 4));//n 字符串截取  参数：1.开始索引 2.结束索引
+            console.log(str.slice(0, -1));//n 字符串截取  参数：1.开始索引 2.结束索引
+            str.split('a')//字符串剪掉，并以它为界限截成数组
+            str.replace('a','b')//字符串替换第一个出现的字符
+            str.concat('b')//字符串拼接 和 + 中的一个功能一样
+            /*
+            * substring和slice效果一样，slice支持负数，
+            * slice负数的时候是反方向
+            * */
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

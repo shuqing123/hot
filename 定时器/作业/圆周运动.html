@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+            #wrap{
+                position: relative;
+                width: 500px;
+                height: 500px;
+                border: 10px solid black;
+            }
+            #wrap span{
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="run">run</button><button id="stop">stop</button>
+        <div id="wrap">
+            <span></span>
+        </div>
+
+        <script>
+
+            (function(){
+                var oW = document.getElementById('wrap');
+                var oS = document.querySelector('#wrap span')
+                var oRun = document.getElementById('run')
+                var oStop = document.getElementById('stop')
+                var r = (oW.clientWidth-oS.clientWidth)/2//半径
+                var deg = 180;//数学中的度数
+                var timer = 0;
+                auto()
+                function auto() {
+                    deg++
+                    if(deg>360){
+                        deg=0
+                    }
+                    //console.log(d);
+                    var d = Math.PI/180*deg;//js里的度数
+                    var x = r-r*Math.cos(d)//坐标x
+                    var y = r-r*Math.sin(d)//坐标y
+                    oS.style.left= x+'px'
+                    oS.style.top= y+'px'
+                }
+                oRun.onclick = function(){
+                    clearInterval(timer)
+                    timer = setInterval(auto,30)
+                }
+                oStop.onclick = function () {
+                    clearInterval(timer)
+                }
+            })();
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            //封装函数 检查字符串结尾
+            function  confirmEnding(str,target){
+                var n1 = str.lastIndexOf(target);
+                var n2 = str.length-target.length;
+                /*if(n1 === n2){
+                    return true
+                }else {
+                    return false
+                }*/
+                return n1===n2
+                //return str.slice(-target.length)===target
+            }
+            confirmEnding("He has to give me a new name", "me")  	//true
+            confirmEnding("He has to give me a new name", "na")  	//false
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

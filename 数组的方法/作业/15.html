@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            //封装函数  获取字符串中的数字，并按照数组输出
+            function returnArr(str){
+                for (var i = 0, length = str.length; i < length; i++) {
+                    if(isNaN(str[i])){
+                       str = str.replace(str[i],'!')
+                    }
+                }
+                var arr = str.split('!');
+                var newArr = [];
+                for (var i = 0, length = arr.length; i < length; i++) {
+                    if(arr[i]){
+                        newArr.push(+arr[i])
+                    }
+                }
+                return newArr
+            }
+            returnArr('shdkfh1234cxj5665sdkj2121')	//[1234,5665,2121]
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

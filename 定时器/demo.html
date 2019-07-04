@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <meta name="keywords" content="关键词">
+        <meta name="description" content="描述">
+        <meta name="author" content="">
+        <style>
+            body{font-family: "Microsoft YaHei",serif;}
+            body,dl,dd,p,h1,h2,h3,h4,h5,h6{margin:0;}
+            ol,ul,li{margin:0;padding:0;list-style:none;}
+            img{border:none;}
+
+        </style>
+    </head>
+    <body>
+        <div id="wrap"></div>
+
+        <script>
+            /*
+            * setTimeout  延时定时器   只执行一次
+            * setInterval 循环定时器   无限执行
+            *   参数
+            *       1.回调函数  如果是字符串，会把它当作js代码执行
+            *       2.时间间隔
+            *       3--.传进回调的实参
+            *  返回值是定时器的第几个
+            * */
+            /*setTimeout(function (a) {
+                console.log(a);
+            },1000,5);*/
+            var timer = setInterval(function () {
+                console.log('重复执行');
+                clearInterval(timer)//关闭定时器
+            },1000)
+
+
+            /*
+            *clearInterval 清除定时器
+            *
+            * */
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
